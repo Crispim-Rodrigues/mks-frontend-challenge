@@ -7,7 +7,6 @@ import { ProductData } from "@/types/ShopData";
 export default function Itemcard() {
   const { state, dispatch } = useContext(CartContext);
   const { products } = state;
-  const total = products.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0);
   const deleteToCart = (item: ProductData) => {
     dispatch({ type: "REMOVE_ITEM", item });
   };
@@ -40,11 +39,6 @@ export default function Itemcard() {
           </div>
         </div>
       ))}
-
-      <div className={styles.total}>
-        <span>Total:</span>
-        <span>R${total}</span>
-      </div>
     </div>
   );
 }
