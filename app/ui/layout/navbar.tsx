@@ -7,8 +7,8 @@ import { useState } from "react";
 import Itemscart from "./itenscart";
 
 const variants = {
-  open: { x: 0 },
-  closed: { x: "100%" },
+  open: { x: 0,display: "flex"},
+  closed: { x: "100%", transitionEnd:{display: "none"} },
 };
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
