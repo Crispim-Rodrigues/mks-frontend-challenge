@@ -13,3 +13,8 @@ export interface ProductData{
 export interface ProductResponse{
     products: ProductData[]
 }
+
+export interface CartAction{
+    type: string;
+    item?: ProductData;
+}
