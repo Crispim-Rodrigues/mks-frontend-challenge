@@ -3,15 +3,18 @@ import Link from "next/link";
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Itemscart from "./itenscart";
-
+import { CartContext } from "@/contexts/cartContex";
 const variants = {
   open: { x: 0,display: "flex"},
   closed: { x: "100%", transitionEnd:{display: "none"} },
 };
 export default function Navbar() {
+  const { state } = useContext(CartContext);
+  const { products } = state;
   const [isOpen, setIsOpen] = useState(false);
+  const total = products.reduce((acc, item) => acc + item.quantity, 0)
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -22,7 +25,7 @@ export default function Navbar() {
         </Link>
         <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
           <Image src="Vector.svg" alt="" width={19} height={18}></Image>
-          <span>0</span>
+          <span>{total}</span>
         </button>
       </div>
       <motion.div

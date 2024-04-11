@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CartContext } from "@/contexts/cartContex";
 import { ProductData } from "@/types/ShopData";
 
-export default function Itemcard({ product }: { product: ProductData }) {
+export default function Itemcard() {
   const { state, dispatch } = useContext(CartContext);
   const { products } = state;
   const total = products.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0);
