@@ -7,8 +7,8 @@ import { ProductData } from "@/types/ShopData";
 import { useContext } from "react";
 
 
-export default function Home({product}:{ product: ProductData }) {
-  const { isPending, error, data } = useProduct();
+export default function Home() {
+  const { isPending, data } = useProduct();
   const { dispatch } = useContext(CartContext);
 
   const addToCart = (item: ProductData) => {
