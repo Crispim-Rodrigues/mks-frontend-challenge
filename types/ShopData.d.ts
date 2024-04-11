@@ -8,7 +8,8 @@ export interface ProductData{
     photo: string,
     price: string,
     createAt: string,
-    updateAt: string
+    updateAt: string,
+    quantity: number
 }
 export interface ProductResponse{
     products: ProductData[]
