@@ -44,16 +44,14 @@
     font-weight: 400;
 }
 .price{
-    flex: 2;
     font-size: 0.875rem;
     text-align: end;
     font-weight: 700;
 }
 .input{
     position: relative;
-    flex: 1.1;
     display: flex;
-    width: 3.125rem;
+    width: 4rem;
     height: 1.188rem;
     padding: 3px 0;
     border-radius: 0.25rem;
@@ -78,7 +76,7 @@
     border-radius: 0.25rem;
 }
 .input button:last-of-type{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 .card input[type="text"]{
     width: calc(100% / 3);
@@ -113,4 +111,50 @@
 .total span{
     font-size: 1.75rem;
     font-weight: 700;
+}
+.subflex{
+    flex: 3.5;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 1rem;
+}
+@media (max-width:768px) {
+    .card{
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 13.753rem;
+    }
+    .card img {
+        flex: none;
+        width: 100%;
+        padding: 0 3rem;
+        height: auto
+    
+    }
+    .input{
+       width: 55%;
+       height: 2.156rem;
+       padding: 0.6rem 0;
+    }
+    .input button{
+        font-size: 1.2rem
+    }
+    .input button:last-of-type{
+        font-size: 1.2rem;
+    }
+    .input span{
+        display: none;
+    }
+    .price{
+        display: flex;
+        align-items: center;
+        border-radius: 0.313rem;
+        color: $white;
+        padding: 0.2rem 0.5rem;
+        background-color: #373737;
+    }
+    .subflex{
+        align-items: center;
+    }
 }

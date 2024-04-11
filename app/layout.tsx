@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./ui/globals.scss";
 import Navbar from './ui/layout/navbar';
+import Footer from "./ui/layout/footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={`${montserrat.className} antialiased`}>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

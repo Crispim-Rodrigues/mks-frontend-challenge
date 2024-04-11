@@ -45,12 +45,13 @@
 }
 .title span{
     background-color: #373737;
-    height: fit-content;
+    height: max-content;
     padding: 0.1rem 0.3rem;
     color: $white;
     font-size: 0.938rem;
     font-weight: 700;
     border-radius: 0.313rem;
+    margin: 0 0.3rem;
 }
 .buy{
     display: flex;
