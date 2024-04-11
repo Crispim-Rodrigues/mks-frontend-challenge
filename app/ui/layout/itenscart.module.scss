@@ -1,0 +1,116 @@
+@import '../variables.scss';
+.itens{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    align-items: center;
+}
+.itens::-webkit-scrollbar {
+    width: 4px;
+}
+.itens::-webkit-scrollbar-track {
+    background: #00000000;
+}
+.itens::-webkit-scrollbar-thumb {
+    background: #00255c33;
+    border-radius: 0.5rem;
+}
+.itens::-webkit-scrollbar-thumb:hover{
+    background: #00255c;
+}
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    width: calc(100% - 1.5rem);
+    height: 5.938rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+.card img {
+    flex: 1;
+    width: auto;
+    height: 100%;
+
+}
+.card .description{
+    flex: 2;
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+.price{
+    flex: 2;
+    font-size: 0.875rem;
+    text-align: end;
+    font-weight: 700;
+}
+.input{
+    position: relative;
+    flex: 1.1;
+    display: flex;
+    width: 3.125rem;
+    height: 1.188rem;
+    padding: 3px 0;
+    border-radius: 0.25rem;
+    border: 0.5px solid #BFBFBF;
+
+}
+.input span{
+    font-size: 0.313rem;
+    font-weight: 400;
+    position: absolute;
+    top: -50%;
+}
+.input button{
+    display: flex;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: calc(100% / 3);
+    border: none;
+    background-color: $white;
+    border-radius: 0.25rem;
+}
+.input button:last-of-type{
+    font-size: 0.5rem;
+}
+.card input[type="text"]{
+    width: calc(100% / 3);
+    font-size: 0.5rem;
+    border: none;
+    text-align: center;
+    border-left: 0.5px solid #BFBFBF;
+    border-right: 0.5px solid #BFBFBF;
+}
+.card input[type="text"]:focus{
+    outline: none;
+}
+.close{
+    position: absolute;
+    right: -10px;
+    top:-13px;
+    background-color: $black;
+    color: $white;
+    border: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 100px;
+}
+.total{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    bottom: 0;
+    color: $white;
+}
+.total span{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
