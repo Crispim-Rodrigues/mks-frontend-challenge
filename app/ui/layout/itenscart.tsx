@@ -25,15 +25,12 @@ export default function Itemcard() {
           <div className={styles.subflex}>
             <div className={styles.input}>
               <span>Qtd:</span>
-              <button onClick={()=>removeSingleToCart(item)}>−</button>
+              <button onClick={() => removeSingleToCart(item)}>−</button>
               <input type="text" value={item.quantity} />
-              <button onClick={()=>addToCart(item)}>+</button>
+              <button onClick={() => addToCart(item)}>+</button>
             </div>
-            <span className={styles.price}>{item.price}</span>
-            <button
-              className={styles.close}
-              onClick={() => deleteToCart(item)}
-            >
+            <span className={styles.price}>R${parseFloat(item.price) * item.quantity}</span>
+            <button className={styles.close} onClick={() => deleteToCart(item)}>
               X
             </button>
           </div>

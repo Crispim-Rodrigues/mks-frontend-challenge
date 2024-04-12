@@ -14,10 +14,9 @@ export function useProduct() {
     queryKey: ["ProductData"],
     queryFn: fetch,
   });
- 
 
   return {
     ...query,
-    data: query.data?.data.products
+    data: query.data?.data.products,
   };
 }

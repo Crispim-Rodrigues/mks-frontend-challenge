@@ -15,7 +15,10 @@ export default function Navbar() {
   const { products } = state;
   const [isOpen, setIsOpen] = useState(false);
   const total = products.reduce((acc, item) => acc + item.quantity, 0);
-  const totalprice = products.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0);
+  const totalprice = products.reduce(
+    (acc, item) => acc + parseFloat(item.price) * item.quantity,
+    0
+  );
   return (
     <header className={styles.header}>
       <div className={styles.container}>

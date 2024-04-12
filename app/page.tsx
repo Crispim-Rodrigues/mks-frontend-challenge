@@ -6,13 +6,12 @@ import { CartContext } from "@/contexts/cartContex";
 import { ProductData } from "@/types/ShopData";
 import { useContext } from "react";
 
-
 export default function Home() {
   const { isPending, data } = useProduct();
   const { dispatch } = useContext(CartContext);
 
   const addToCart = (item: ProductData) => {
-    dispatch({ type: 'ADD_ITEM', item });
+    dispatch({ type: "ADD_ITEM", item });
   };
   return (
     <main className={styles.main}>
@@ -33,9 +32,7 @@ export default function Home() {
                     <h4>{data.name}</h4>
                     <span>R${data.price}</span>
                   </div>
-                  <span className={styles.subtitle}>
-                    {data.description}
-                  </span>
+                  <span className={styles.subtitle}>{data.description}</span>
                 </div>
                 <div className={styles.buy} onClick={() => addToCart(data)}>
                   <Image
@@ -51,7 +48,7 @@ export default function Home() {
           </>
         )}
 
-        {isPending && <p>carregando</p>}
+        {isPending && <p>carregando...</p>}
       </div>
     </main>
   );
